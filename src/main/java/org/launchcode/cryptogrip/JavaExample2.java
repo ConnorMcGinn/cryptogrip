@@ -19,7 +19,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaExample {
+public class JavaExample2 {
 
     private static String apiKey = "aea6365d-04ca-4e27-9203-12cb64d0739b";
 
@@ -27,7 +27,7 @@ public class JavaExample {
         String uri = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         List<NameValuePair> paratmers = new ArrayList<NameValuePair>();
         paratmers.add(new BasicNameValuePair("start","1"));
-        paratmers.add(new BasicNameValuePair("limit","5"));
+        paratmers.add(new BasicNameValuePair("limit","2"));
         paratmers.add(new BasicNameValuePair("convert","USD"));
 
         try {
@@ -60,7 +60,6 @@ public class JavaExample {
             HttpEntity entity = response.getEntity();
             response_content = EntityUtils.toString(entity);
             EntityUtils.consume(entity);
-
         } finally {
             response.close();
         }

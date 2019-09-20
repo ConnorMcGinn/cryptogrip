@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: head">
+</head>
+<body>
+    <div class="container body-content">
+        <table class="table">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+            </tr>
+            <tbody>
+                <tr th:each=" crypto : ${cryptos}">
+                    <td th:text="${crypto.cmcRank}"></td>
+                    <td th:text="${crypto.name}"></td>
+                    <td th:text="${crypto.price}"></td>
+                    <td th:text="${crypto.marketCap}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
